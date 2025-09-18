@@ -5,9 +5,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "npx @based/cli",
-    "deploy": "npx @based/cli",
-    "test": "vitest",
+    "dev": "npx @based/cli@8.2.3 dev",
+    "deploy": "npx @based/cli@8.2.3 deploy",
     "based:cli:onFirstRun": "node ./scripts/onFirstRun.js"
   },
   "dependencies": {
