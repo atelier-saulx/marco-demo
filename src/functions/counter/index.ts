@@ -7,7 +7,7 @@ const counter: BasedQueryFunction = async (
   error,
   ctx
 ) => {
-  console.log("???????", ctx);
+  console.log("CTX => ", ctx);
   const q = based.db.query("user").include("name").locale("en");
 
   // if (payload?.filter) {
@@ -16,7 +16,7 @@ const counter: BasedQueryFunction = async (
 
   // return q.subscribe(update);
 
-  return q.subscribe(update);
+  return q.subscribe((x) => update(x.toObject()));
 };
 
 export default counter;
