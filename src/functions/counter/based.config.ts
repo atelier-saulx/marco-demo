@@ -3,7 +3,7 @@ import type { BasedFunctionConfig } from "@based/functions";
 const config: BasedFunctionConfig = {
   type: "query",
   name: "counter",
-  public: true,
+  ctx: ["authState.ctx"],
 };
 
 export default config;

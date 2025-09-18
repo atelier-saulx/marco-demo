@@ -1,4 +1,4 @@
-import type { Authorize } from '@based/functions'
+import type { Authorize } from "@based/functions";
 
 /************************************************************
  *                                                          *
@@ -13,10 +13,17 @@ import type { Authorize } from '@based/functions'
  * function.                                                *
  *                                                          *
  ************************************************************/
-const authorize: Authorize = async (_based, _ctx, _name, _payload) => {
-  // You can perform any kind of validation to determine
-  // whether the user is allowed to execute the function.
-  return true
-}
+const authorize: Authorize = async (based, ctx, name, payload) => {
+  await based.renewAuthState(ctx, {
+    userId: "1",
+    token: ctx.session?.authState.token,
+  });
+  if (ctx.session?.authState.token === "🔑") {
+    console.log("LOGIN");
 
-export default authorize
+    return true;
+  }
+  return false;
+};
+
+export default authorize;

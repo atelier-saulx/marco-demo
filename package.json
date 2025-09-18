@@ -5,31 +5,24 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "lint": "npx @biomejs/biome lint",
-    "dev": "npx @based/cli@alpha dev",
-    "deploy": "npx @based/cli@alpha deploy",
+    "dev": "npx @based/cli@8.2.0 dev",
+    "deploy": "npx @based/cli@8.2.0 deploy",
     "test": "vitest",
     "based:cli:onFirstRun": "node ./scripts/onFirstRun.js"
   },
   "dependencies": {
-    "@based/client": "latest",
+    "@based/client": "^8.2.0",
     "@based/react": "latest",
-    "@based/ui": "alpha",
-    "@based/schema": "latest",
-    "@based/db": "latest",
+    "@based/schema": "^5.0.3",
+    "@based/db": "^0.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@based/functions": "latest",
-    "@biomejs/biome": "1.9.4",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.0.1",
     "@types/node": "^22.7.4",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
-    "jsdom": "^25.0.1",
-    "typescript": "^5.6.2",
-    "vitest": "^2.1.5"
+    "typescript": "^5.6.2"
   }
 }

@@ -5,18 +5,13 @@ export const Counter = () => {
   const [name, setName] = useState("");
   // const [filter, setFilter] = useState("");
 
-  const { data: rootProps } = useQuery("filter");
+  // const { data: rootProps } = useQuery("filter");
 
   const client = useClient();
 
-  const { data, loading } = useQuery("counter", {
-    filter: rootProps?.filter || "",
+  const { data, loading, error } = useQuery("counter", {
+    // filter: rootProps?.filter || "",
   });
-
-  const background: string =
-    "linear-gradient(112.33deg,#ff1f85 -11.53%,#4b41ff 93.86%)";
-
-  console.log(name);
 
   return (
     <div
@@ -28,7 +23,7 @@ export const Counter = () => {
     >
       <div>
         <input
-          value={rootProps?.filter}
+          // value={rootProps?.filter}
           onChange={(e) =>
             client.call("add-filter", { filter: e.target.value })
           }
@@ -41,8 +36,17 @@ export const Counter = () => {
         >
           Add user
         </button>
+        <button
+          onClick={() => {
+            client.setAuthState({ token: "🔑" });
+          }}
+        >
+          Login
+        </button>
       </div>
-      {loading
+      {error
+        ? "errr " + error.message
+        : loading
         ? "..."
         : data.map((v: any) => {
             return (
