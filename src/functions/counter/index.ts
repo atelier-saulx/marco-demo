@@ -16,7 +16,7 @@ const counter: BasedQueryFunction = async (
 
   // return q.subscribe(update);
 
-  return q.subscribe((d) => update(d.toObject()));
+  return q.subscribe(update);
 };
 
 export default counter;
