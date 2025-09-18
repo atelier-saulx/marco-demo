@@ -5,21 +5,21 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "npx @based/cli@8.2.0 dev",
-    "deploy": "npx @based/cli@8.2.0 deploy",
+    "dev": "npx @based/cli dev",
+    "deploy": "npx @based/cli deploy",
     "test": "vitest",
     "based:cli:onFirstRun": "node ./scripts/onFirstRun.js"
   },
   "dependencies": {
-    "@based/client": "^8.2.0",
+    "@based/client": "^8.2.1",
     "@based/react": "latest",
-    "@based/schema": "^5.0.3",
-    "@based/db": "^0.1.1",
+    "@based/schema": "^5.0.2",
+    "@based/db": "^0.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@based/functions": "latest",
+    "@based/functions": "^3.3.1",
     "@types/node": "^22.7.4",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
