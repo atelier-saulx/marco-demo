@@ -5,8 +5,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "npx @based/cli@8.2.3 dev",
-    "deploy": "npx @based/cli@8.2.3 deploy",
+    "dev": "npx @based/cli@8.2.4-alpha dev",
+    "deploy": "npx @based/cli@8.2.4-alpha deploy",
     "based:cli:onFirstRun": "node ./scripts/onFirstRun.js"
   },
   "dependencies": {
@@ -18,7 +18,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@based/cli": "^8.2.3",
+    "@based/cli": "8.2.4-alpha",
     "@based/functions": "^3.3.1",
     "@types/node": "^22.7.4",
     "@types/react": "^18.0.25",

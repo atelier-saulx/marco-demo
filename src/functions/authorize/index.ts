@@ -14,16 +14,19 @@ import type { Authorize } from "@based/functions";
  *                                                          *
  ************************************************************/
 const authorize: Authorize = async (based, ctx, name, payload) => {
-  await based.renewAuthState(ctx, {
-    userId: "1",
-    token: ctx.session?.authState.token,
-  });
-  if (ctx.session?.authState.token === "🔑") {
-    console.log("LOGIN");
-
-    return true;
+  if (ctx.session?.authState.token !== "🔑") {
+    return false;
   }
-  return false;
+
+  console.info("AUTHORIZE");
+  await based.renewAuthState(ctx, {
+    userId: 1,
+  });
+
+  console.info("AUTHORIZE", ctx.session?.authState);
+
+  console.log("LOGIN");
+  return true;
 };
 
 export default authorize;
