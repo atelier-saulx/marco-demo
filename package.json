@@ -5,12 +5,13 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "npx @based/cli dev",
+    "clean": "rm -rf ./node_modules ./dist ./tsconfig.tsbuildinfo",
+    "dev": "npx @based/cli@8.2.4-alpha.3 dev",
     "deploy": "npx @based/cli deploy",
     "based:cli:onFirstRun": "node ./scripts/onFirstRun.js"
   },
   "dependencies": {
-    "@based/client": "^8.2.1",
+    "@based/client": "8.2.2-alpha.1",
     "@based/react": "latest",
     "@based/schema": "^5.0.2",
     "@based/db": "0.1.3-alpha.1",
@@ -18,8 +19,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@based/cli": "8.2.4-alpha",
-    "@based/functions": "^3.3.1",
+    "@based/cli": "8.2.4-alpha.3",
+    "@based/functions": "^3.3.2-alpha.1",
     "@types/node": "^22.7.4",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
