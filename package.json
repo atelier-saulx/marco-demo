@@ -1,11 +1,11 @@
 {
   "name": "based-boilerplate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "My Based.io app",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "clean": "rm -rf ./node_modules ./dist ./tsconfig.tsbuildinfo",
+    "clean": "rm -rf ./node_modules ./dist ./tsconfig.tsbuildinfo ./tmp",
     "dev": "npx @based/cli@8.2.4-alpha.3 dev",
     "deploy": "npx @based/cli deploy",
     "based:cli:onFirstRun": "node ./scripts/onFirstRun.js"
