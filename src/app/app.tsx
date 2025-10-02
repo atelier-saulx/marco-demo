@@ -1,5 +1,4 @@
-import client, { type BasedClient } from "@based/sdk";
-import { Provider as BasedClientProvider } from "@based/sdk";
+import { type BasedClient, Provider as BasedClientProvider } from "@based/sdk";
 import { createRoot } from "react-dom/client";
 import { Counter } from "./components/counter.js";
 import "./index.css";
