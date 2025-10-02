@@ -1,8 +1,5 @@
-import {
-  type BasedClient,
-  Provider as BasedClientProvider,
-  based,
-} from "@based/sdk";
+import based, { type BasedClient } from "@based/sdk/client";
+import { Provider } from "@based/sdk/react";
 import { createRoot } from "react-dom/client";
 import { Counter } from "./components/counter.js";
 import "./index.css";
@@ -21,7 +18,7 @@ const App = () => {
 };
 
 root.render(
-  <BasedClientProvider client={client}>
+  <Provider client={client}>
     <App />
-  </BasedClientProvider>
+  </Provider>
 );

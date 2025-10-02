@@ -1,4 +1,4 @@
-import { useClient, useQuery } from "@based/sdk";
+import { useClient, useQuery } from "@based/sdk/react";
 import { useState } from "react";
 
 export const Counter = () => {
