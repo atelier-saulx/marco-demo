@@ -1,4 +1,4 @@
-import type { SchemaType } from "@based/schema";
+import type { SchemaType } from "@based/sdk";
 
 export const user: SchemaType = {
   name: "string",

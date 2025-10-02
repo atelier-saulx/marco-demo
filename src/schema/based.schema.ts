@@ -1,4 +1,4 @@
-import type { Schema } from "@based/schema";
+import type { Schema } from "@based/sdk";
 import { user } from "./user.js";
 
 const schema: Schema = {

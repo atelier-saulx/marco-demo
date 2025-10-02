@@ -1,4 +1,4 @@
-import type { BasedQueryFunction } from "@based/functions";
+import type { BasedQueryFunction } from "@based/sdk";
 
 const counter: BasedQueryFunction = async (
   based,

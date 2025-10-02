@@ -1,4 +1,4 @@
-import type { Authorize } from "@based/functions";
+import type { Authorize } from "@based/sdk";
 
 /************************************************************
  *                                                          *

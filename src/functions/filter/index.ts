@@ -1,4 +1,4 @@
-import type { BasedQueryFunction } from "@based/functions";
+import type { BasedQueryFunction } from "@based/sdk";
 
 const filter: BasedQueryFunction = async (based, payload, update) => {
   return based.db.query().include("filter").subscribe(update);

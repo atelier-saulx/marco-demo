@@ -1,4 +1,4 @@
-import type { BasedAuthorizeFunctionConfig } from '@based/functions'
+import type { BasedAuthorizeFunctionConfig } from "@based/sdk";
 
 const config: BasedAuthorizeFunctionConfig = {
   /************************************************************
@@ -16,7 +16,7 @@ const config: BasedAuthorizeFunctionConfig = {
    *                to other functions.                       *
    *                                                          *
    ************************************************************/
-  type: 'authorize',
-}
+  type: "authorize",
+};
 
-export default config
+export default config;

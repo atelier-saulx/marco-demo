@@ -1,4 +1,4 @@
-import type { BasedAppFunction } from "@based/functions";
+import type { BasedAppFunction } from "@based/sdk";
 
 /************************************************************
  *                                                          *
